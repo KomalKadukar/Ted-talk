@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  url: MyString
+  views: 1
+  speaker: one
+  tag: one
+
+two:
+  title: MyString
+  description: MyString
+  url: MyString
+  views: 1
+  speaker: two
+  tag: two

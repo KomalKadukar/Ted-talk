@@ -1,5 +1,6 @@
 class Tag < ApplicationRecord
-  has_many :tedtalks, dependent: :destroy
+  has_many :categories
+  has_many :tedtalks, through: :categories
 
   validates :name, presence:true, uniqueness:true
 end

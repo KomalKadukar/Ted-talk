@@ -6,7 +6,6 @@ class CreateTedtalks < ActiveRecord::Migration[5.2]
       t.string :url
       t.integer :views
       t.references :speaker, foreign_key: true
-      t.references :tag, foreign_key: true
 
       t.timestamps
     end

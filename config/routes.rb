@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   # about page path
   get 'about', to: 'pages#about', as: 'about'
 
-  # tedtalk path - index page
+  # tedtalks - index and show pages
   resources :tedtalks, only: [:index, :show]
+
+  # spealkers path - index and show page
+  resources :speakers, only: [:index, :show], as: 'speaker'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

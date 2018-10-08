@@ -1,0 +1,11 @@
+<h1>Available Speakers </h1>
+
+<ul>
+  <% @speakers.each do |speaker| %>
+    <li>
+      <pre>
+        <b>Name: </b><%= speaker.name %>
+      </pre>
+    </li>
+  <% end %>
+</ul>

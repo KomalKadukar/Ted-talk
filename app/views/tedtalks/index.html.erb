@@ -1,2 +1,12 @@
-<h1>Tedtalks#index</h1>
-<p>Find me in app/views/tedtalks/index.html.erb</p>
+<h1>Ted Talks Details</h1>
+
+<ul>
+  <% @tedtalks.each do |talk| %>
+    <li>
+      <pre>
+        <b>Title: </b><%= link_to talk.title, talk %>
+        <b>Description: </b><%= talk.description %>
+      </pre>
+    </li>
+  <% end %>
+</ul>

@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # speakers path - index and show page
   # get '/speakers', to: 'speakers#index', as: 'speaker'
   # get '/speakers/:id', to: 'speakers#show'
-  resources :speakers, only: [:index, :show], as: 'speaker'
+  resources :speakers, only: [:index, :show], as: 'speakers'
 
   # tags path - index and show pages
   resources :tags, only: [:index, :show], as: 'tags'

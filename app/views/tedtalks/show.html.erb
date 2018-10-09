@@ -4,7 +4,7 @@
   <li>
     <pre>
       <b>Description: </b><%= @tedtalk.description %>
-      <b>Speaker: </b><%= link_to @tedtalk.speaker.name, speaker_url %>
+      <b>Speaker: </b><%= link_to @tedtalk.speaker.name, speaker_path %>
       <b>Url: </b><%= link_to @tedtalk.url, @tedtalk.url %>
       <b>Categories: </b><% @tedtalk.tags.each do |tag| %> <%= link_to tag.name.strip.gsub("'","").capitalize, tag  %> <% end %>
       <b>Views: </b><%= @tedtalk.views %>

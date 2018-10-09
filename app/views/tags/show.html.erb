@@ -1,2 +1,12 @@
-<h1>Tags#show</h1>
-<p>Find me in app/views/tags/show.html.erb</p>
+<h1> <%= @tag.name.strip.gsub("'","").capitalize %> </h1>
+
+<ul>
+  <% @tag.tedtalks.each do |talk| %>
+    <li>
+      <pre>
+        <b>Title: </b><%= link_to talk.title, talk %>
+        <b>Description: </b><%= talk.description %>
+      </pre>
+    </li>
+  <% end %>
+</ul>

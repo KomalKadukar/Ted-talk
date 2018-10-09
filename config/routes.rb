@@ -18,5 +18,8 @@ Rails.application.routes.draw do
   # get '/speakers/:id', to: 'speakers#show'
   resources :speakers, only: [:index, :show], as: 'speaker'
 
+  # tags path - index and show pages
+  resources :tags, only: [:index, :show], as: 'tags'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

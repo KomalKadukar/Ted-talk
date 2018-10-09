@@ -4,7 +4,7 @@
   <% @speakers.each do |speaker| %>
     <li>
       <pre>
-        <b>Name: </b><%= speaker.name %>
+        <b>Name: </b><%= link_to speaker.name, speaker %>
       </pre>
     </li>
   <% end %>

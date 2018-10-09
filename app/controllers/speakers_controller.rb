@@ -4,6 +4,6 @@ class SpeakersController < ApplicationController
   end
 
   def show
-    @speaker_talks = Speaker.tedtalks
+    @speaker = Speaker.find(params[:id])
   end
 end

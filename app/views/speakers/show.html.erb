@@ -1,0 +1,12 @@
+<h1><%= @speaker.name %></h1>
+
+<ul>
+  <% @speaker.tedtalks.each do |talk| %>
+    <li>
+      <pre>
+        <b>Title: </b><%= link_to talk.title, talk %>
+        <b>Description: </b><%= talk.description %>
+      </pre>
+    </li>
+  <% end %>
+</ul>

@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   # tedtalks - index and show pages
   resources :tedtalks, only: [:index, :show]
 
-  # spealkers path - index and show page
+  # speakers path - index and show page
+  # get '/speakers', to: 'speakers#index', as: 'speaker'
+  # get '/speakers/:id', to: 'speakers#show'
   resources :speakers, only: [:index, :show], as: 'speaker'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

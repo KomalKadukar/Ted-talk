@@ -4,7 +4,7 @@
   <li>
     <pre>
       <b>Description: </b><%= @tedtalk.description %>
-      <b>Speaker: </b><%= @tedtalk.speaker.name %>
+      <b>Speaker: </b><%= link_to @tedtalk.speaker.name, speaker_url %>
       <b>Url: </b><%= link_to @tedtalk.url, @tedtalk.url %>
       <b>Views: </b><%= @tedtalk.views %>
     </pre>

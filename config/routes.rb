@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about', as: 'about'
 
   # tedtalks - index and show pages
-  resources :tedtalks, only: [:index, :show]
+  resources :tedtalks, only: [:index, :show] do
+    collection do
+      get 'results'
+    end
+  end
 
   # speakers path - index and show page
   # get '/speakers', to: 'speakers#index', as: 'speaker'
@@ -20,6 +24,8 @@ Rails.application.routes.draw do
 
   # tags path - index and show pages
   resources :tags, only: [:index, :show], as: 'tags'
+
+  # get 'search/results', to: 'search#results' as: 'search'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

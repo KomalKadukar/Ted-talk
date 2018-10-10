@@ -1,0 +1,11 @@
+<div class="shadow-lg p-3 mb-5 bg-light rounded">
+  <h3 class="text-info"> Found <%= pluralize @tedtalk_results.count, 'Ted talk' %>  with related search.</h3>
+</div>
+
+<% @tedtalk_results.each do |talk| %>
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading"><%= link_to talk.title, talk %></h4>
+    <hr>
+    <p class="text-justify"><%= talk.description %></p>
+  </div>
+<% end %>

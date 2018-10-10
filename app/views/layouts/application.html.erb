@@ -39,18 +39,15 @@
             <%= link_to 'About Us', about_path, class: "nav-link" %>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <%= form_tag(results_tedtalks_path, method: "get", class: "form-inline my-2 my-lg-0") do %>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" name="query" aria-label="Search">
+          <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
+        <% end %>
       </div>
     </nav>
 
     <div id="main-container" class="container">
       <%= yield %>
-      <%# <footer>
-        <p>Copywrong 2018</p>
-      </footer> %>
     </div>
   </body>
 

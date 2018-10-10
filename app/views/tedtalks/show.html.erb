@@ -10,6 +10,9 @@
     <p><%= link_to @tedtalk.speaker.name, @tedtalk.speaker %></p>
     <hr>
     <p><%= link_to @tedtalk.url, @tedtalk.url %></p>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="<%= @tedtalk.url %>" allowfullscreen></iframe>
+    </div>
     <hr>
     <p><% @tedtalk.tags.each do |tag| %>
         <%= link_to tag.name.strip.gsub("'","").capitalize, tag, class: "btn btn-outline-primary"  %>

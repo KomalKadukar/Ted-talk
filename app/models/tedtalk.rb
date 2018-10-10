@@ -4,4 +4,5 @@ class Tedtalk < ApplicationRecord
   has_many :tags, through: :categories
 
   validates :title, :description, :url, presence: true
+  paginates_per 10
 end

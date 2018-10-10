@@ -2,6 +2,11 @@
   <h3 class="text-info font-weight-bold">Ted Talks</h3>
 </div>
 
+<div class="col align-self-start">
+<%= paginate @tedtalks, theme: 'twitter-bootstrap-4' %>
+</div>
+
+<div class="container">
 <% @tedtalks.each do |talk| %>
   <div class="alert alert-info" role="alert">
     <h4 class="alert-heading"><%= link_to talk.title, talk %></h4>
@@ -9,3 +14,8 @@
     <p class="text-justify"><%= talk.description %></p>
   </div>
 <% end %>
+</div>
+
+<div class="col align-self-start">
+<%= paginate @tedtalks, theme: 'twitter-bootstrap-4' %>
+</div>

@@ -1,6 +1,6 @@
 class SpeakersController < ApplicationController
   def index
-    @speakers = Speaker.all
+    @speakers = Speaker.order(:name).page(params[:page])
   end
 
   def show

@@ -1,11 +1,10 @@
-<h1>Available Speakers </h1>
 
-<ul>
-  <% @speakers.each do |speaker| %>
-    <li>
-      <pre>
-        <b>Name: </b><%= link_to speaker.name, speaker %>
-      </pre>
-    </li>
-  <% end %>
-</ul>
+<div class="shadow-lg p-3 mb-5 bg-light rounded">
+  <h3>Available Speakers</h3>
+</div>
+
+<div class="list-group">
+<% @speakers.each do |speaker| %>
+   <%= link_to speaker.name, speaker, class: "list-group-item list-group-item-action list-group-item-light font-weight-bold" %>
+<% end %>
+</div>

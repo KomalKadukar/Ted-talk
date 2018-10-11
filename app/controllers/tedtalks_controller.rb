@@ -1,7 +1,7 @@
 class TedtalksController < ApplicationController
   def index
     # @tedtalks = Tedtalk.all
-    @tedtalks = Tedtalk.order(:views).page(params[:page])
+    @tedtalks = Tedtalk.order(views: :desc).page(params[:page])
   end
 
   def show
